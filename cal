@@ -1,0 +1,31 @@
+class Cal:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    
+    def add(self):
+        return self.a + self.b
+    
+    def sub(self):
+        return self.a - self.b
+    
+    def mul(self):
+        return self.a * self.b
+
+    def div(self):
+        try:
+            return self.a / self.b
+        except ZeroDivisionError as e:
+            print('0으로 나눌 수 없습니다.')
+            print((type(e), e))
+            return 'ZeroDivisionError'
+
+
+aa= int(input("숫자 입력하시오.> ")) 
+bb= int(input("숫자 입력하시오.> "))  
+
+cal1 = Cal(aa,bb)   
+print(cal1.add())
+print(cal1.sub())
+print(cal1.mul())
+print(cal1.div())
